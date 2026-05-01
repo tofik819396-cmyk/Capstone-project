@@ -1,9 +1,11 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import FilterSidebar from "../components/FilterSidebar";
 import products from "../data/products";
 import "../styles/Home.css";
+import { i } from "framer-motion/client";
 
 export default function Home() {
   const [filter, setFilter] = useState("");

@@ -1,8 +1,10 @@
+import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useStore } from "../context/StoreContext";
 import { useTheme } from "../context/ThemeContext";
 import { useState } from "react";
 import "../styles/Navbar.css";
+import { i } from "framer-motion/client";
 
 export default function Navbar() {
   const { getCartCount, wishlist } = useStore();

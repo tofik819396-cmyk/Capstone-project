@@ -1,3 +1,5 @@
+import React from "react";
+import { useStore } from "../store";
 import "../styles/FilterSidebar.css";
 
 export default function FilterSidebar({ setFilter, categoryFilter, setCategoryFilter }) {

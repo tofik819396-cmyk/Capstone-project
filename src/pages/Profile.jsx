@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 import { useStore } from "../context/StoreContext";
 import "../styles/Profile.css";

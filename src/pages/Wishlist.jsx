@@ -1,6 +1,9 @@
+import React from "react";
+import { useState } from "react";
 import { useStore } from "../context/StoreContext";
 import { Link } from "react-router-dom";
 import "../styles/Wishlist.css";
+import { i } from "framer-motion/client";
 
 export default function Wishlist() {
   const { wishlist, toggleWishlist, addToCart } = useStore();

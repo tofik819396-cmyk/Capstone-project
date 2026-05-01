@@ -11,6 +11,7 @@ import Wishlist from "./pages/Wishlist";
 import Profile from "./pages/Profile";
 import Products from "./data/products";
 import "./App.css";
+import { useEffect } from "react";
 
 function AppContent() {
   const { notification } = useStore();

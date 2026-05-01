@@ -1,3 +1,6 @@
+
+import React from "react";
+import { useState } from "react";
 const products = [
   { id: 1, title: "Laptop", price: 50000, description: "High performance laptop with 16GB RAM and SSD", category: "Electronics", emoji: "💻" },
   { id: 2, title: "Smartphone", price: 20000, description: "Latest smartphone with 5G and 128GB storage", category: "Electronics", emoji: "📱" },
