@@ -1,3 +1,5 @@
+import React from "react";
+import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StoreProvider, useStore } from "./context/StoreContext";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -9,7 +11,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Wishlist from "./pages/Wishlist";
 import Profile from "./pages/Profile";
-import Products from "./data/products";
+import Products from "./data/Products";
 import "./App.css";
 import { useEffect } from "react";
 
