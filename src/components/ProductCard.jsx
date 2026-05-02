@@ -1,9 +1,6 @@
-import React from "react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useStore } from "../context/StoreContext";
 import "../styles/ProductCard.css";
-import { i } from "framer-motion/client";
 
 export default function ProductCard({ product }) {
   const { addToCart, toggleWishlist, isInWishlist } = useStore();

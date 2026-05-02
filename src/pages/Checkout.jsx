@@ -1,4 +1,3 @@
-import React from "react";
 import { useState } from "react";
 import { useStore } from "../context/StoreContext";
 import { useNavigate } from "react-router-dom";
@@ -20,6 +19,7 @@ export default function Checkout() {
     cardCVV: ""
   });
   const [orderPlaced, setOrderPlaced] = useState(false);
+  const [orderId, setOrderId] = useState(null);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -40,6 +40,7 @@ export default function Checkout() {
     }
 
     setOrderPlaced(true);
+    setOrderId(Math.floor(Math.random() * 1000000));
     showNotification("Order placed successfully!", "success");
     
     setTimeout(() => {
@@ -63,7 +64,7 @@ export default function Checkout() {
         <div className="success-message">
           <h2>✓ Order Placed Successfully!</h2>
           <p>Thank you for your purchase.</p>
-          <p>Order ID: #ORD{Math.floor(Math.random() * 1000000)}</p>
+          <p>Order ID: #ORD{orderId}</p>
           <p>Redirecting to home...</p>
         </div>
       </div>

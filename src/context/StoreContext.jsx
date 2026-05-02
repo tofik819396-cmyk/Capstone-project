@@ -1,24 +1,26 @@
-import React from "react";
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect, useRef } from "react";
 
 const StoreContext = createContext();
 
 export const StoreProvider = ({ children }) => {
-  const [cart, setCart] = useState([]);
-  const [wishlist, setWishlist] = useState([]);
+  const [cart, setCart] = useState(() => {
+    const savedCart = localStorage.getItem("cart");
+    return savedCart ? JSON.parse(savedCart) : [];
+  });
+  const [wishlist, setWishlist] = useState(() => {
+    const savedWishlist = localStorage.getItem("wishlist");
+    return savedWishlist ? JSON.parse(savedWishlist) : [];
+  });
   const [notification, setNotification] = useState(null);
   const [user, setUser] = useState({ name: "John Doe", email: "john@example.com", phone: "+1234567890" });
-
-  // Load from localStorage on mount
-  useEffect(() => {
-    const savedCart = localStorage.getItem("cart");
-    const savedWishlist = localStorage.getItem("wishlist");
-    if (savedCart) setCart(JSON.parse(savedCart));
-    if (savedWishlist) setWishlist(JSON.parse(savedWishlist));
-  }, []);
+  const isInitialMount = useRef(true);
 
   // Save to localStorage when cart changes
   useEffect(() => {
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
 

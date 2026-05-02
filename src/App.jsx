@@ -1,5 +1,3 @@
-import React from "react";
-import { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { StoreProvider, useStore } from "./context/StoreContext";
 import { ThemeProvider } from "./context/ThemeContext";
@@ -11,9 +9,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Wishlist from "./pages/Wishlist";
 import Profile from "./pages/Profile";
-import Item from "./data/Item";
 import "./App.css";
-import { useEffect } from "react";
 
 function AppContent() {
   const { notification } = useStore();
@@ -30,7 +26,6 @@ function AppContent() {
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/wishlist" element={<Wishlist />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/products" element={<Products />} />
         </Routes>
       </main>
     </>

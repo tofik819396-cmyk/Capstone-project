@@ -1,7 +1,7 @@
-import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
 import { useStore } from "../context/StoreContext";
+import products from "../data/Item";
 import "../styles/Product.css";
 
 export default function Product() {
