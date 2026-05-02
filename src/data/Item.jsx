@@ -1,7 +1,9 @@
 
 import React from "react";
 import { useState } from "react";
-const products = [
+import itemData from "../data/Item";
+
+ const item = [
   { id: 1, title: "Laptop", price: 50000, description: "High performance laptop with 16GB RAM and SSD", category: "Electronics", emoji: "💻" },
   { id: 2, title: "Smartphone", price: 20000, description: "Latest smartphone with 5G and 128GB storage", category: "Electronics", emoji: "📱" },
   { id: 3, title: "Headphones", price: 3000, description: "Noise cancelling wireless headphones", category: "Audio", emoji: "🎧" },
@@ -12,6 +14,6 @@ const products = [
   { id: 8, title: "Screen Protector", price: 300, description: "Tempered glass screen protector", category: "Accessories", emoji: "🛡️" },
   { id: 9, title: "USB Cable", price: 400, description: "Durable USB cable for charging and data transfer", category: "Accessories", emoji: "🔗" },
   { id: 10, title: "Earbuds", price: 1200, description: "True wireless earbuds with ANC", category: "Audio", emoji: "🎧" },
-];
+ ];
 
-export default products;
+export default item;

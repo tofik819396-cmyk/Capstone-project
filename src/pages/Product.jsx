@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
-import products from "../data/products";
+import Product from "./Product";
 import { useStore } from "../context/StoreContext";
 import "../styles/Product.css";
 

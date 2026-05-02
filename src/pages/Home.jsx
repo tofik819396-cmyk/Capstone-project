@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import ProductCard from "../components/ProductCard";
 import FilterSidebar from "../components/FilterSidebar";
-import products from "../data/products";
+import products from "../data/Item";
 import "../styles/Home.css";
 import { i } from "framer-motion/client";
 

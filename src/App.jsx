@@ -11,7 +11,7 @@ import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Wishlist from "./pages/Wishlist";
 import Profile from "./pages/Profile";
-import Products from "./data/Products";
+import Item from "./data/Item";
 import "./App.css";
 import { useEffect } from "react";
 

@@ -6,7 +6,7 @@ import { useState } from "react";
 import "../styles/Navbar.css";
 import { i } from "framer-motion/client";
 
-export default function Navbar() {
+ export default function Navbar() {
   const { getCartCount, wishlist } = useStore();
   const { isDark, toggleTheme } = useTheme();
   const [searchInput, setSearchInput] = useState("");
@@ -52,4 +52,3 @@ export default function Navbar() {
     </nav>
   );
 }
-export default Navbar;
